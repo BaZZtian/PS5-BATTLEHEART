@@ -21,8 +21,8 @@ publication metadata. It does not claim to be a playable game release.
 - No NTSC-U image or physical PS5 gameplay test has been completed.
 - No playable game release or console deployment exists for this project.
 - A metadata-only Prospero Store reservation for **OpenSA2B PS5** (`PPSA99732`)
-  is open as [catalog PR #420](https://github.com/darkxex/ps5-homebrew-catalog/pull/420)
-  and awaits maintainer review; it is not a live listing.
+  was merged through [catalog PR #420](https://github.com/darkxex/ps5-homebrew-catalog/pull/420).
+  It is a listing without a download; no playable package is published.
 
 ## Runtime work
 

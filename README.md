@@ -13,10 +13,10 @@ preparation and a release-evidence checker. Synthetic tests and compilation are
 not evidence of gameplay on a console.
 
 The Prospero Store placeholder uses title ID `PPSA99732` and the display name
-**OpenSA2B PS5**. Its catalog reservation is open in
-[pull request #420](https://github.com/darkxex/ps5-homebrew-catalog/pull/420);
-it is not merged or live. The placeholder contains no download, game code,
-assets or ISO.
+**OpenSA2B PS5**. Its metadata reservation was merged through
+[catalog pull request #420](https://github.com/darkxex/ps5-homebrew-catalog/pull/420).
+It is a metadata-only listing and contains no download, game code, assets or
+ISO.
 
 ## Current scope
 

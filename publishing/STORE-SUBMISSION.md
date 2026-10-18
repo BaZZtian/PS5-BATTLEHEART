@@ -24,15 +24,17 @@ file, but could not open the upstream PR through its integration permissions.
 The PR was then successfully submitted through the authenticated GitHub UI;
 no duplicate PR was created. Maintainer edits/access to fork secrets is disabled.
 
-At submission, the PR is open and requires maintainer review. This does not
-mean the placeholder is merged or live in the store. No release, game build,
-ISO, game assets or reconstructed/translated game code was published.
+The catalog maintainer subsequently merged the PR into the catalog main branch
+(merge commit `c36dae166a021bb7dba815494fb35fecfd471683`). The reservation is
+therefore present as a metadata-only catalog listing; it still has no download,
+game build, ISO, game assets or reconstructed/translated game code. The saved
+screenshot records the pre-merge submission state.
 The local `PPSA99732.coming-soon.json` matches the submitted record.
 
 Final check: GitHub reports success for `Tests and offline check`,
 `Validate submission`, `Scan the release` and `Is it a developer's release bump?`.
-Five release/deployment jobs were skipped as expected. The PR is open and
-unmerged. The confirmation screenshot is `STORE-SUBMISSION-2026-10-19.png`.
+Five release/deployment jobs were skipped as expected. The confirmation
+screenshot is `STORE-SUBMISSION-2026-10-19.png`.
 
 Keep PPSA99732 for a future actual release. Before enabling a download, satisfy
 the existing gameplay, PAL/NTSC, provenance, licensing and package review gates.

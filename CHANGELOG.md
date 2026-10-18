@@ -23,7 +23,7 @@ Verified at this snapshot:
 - no ISO, DOL, REL, original asset, reconstructed game code or private build is
   part of the source snapshot.
 
-The catalog reservation is [PR #420](https://github.com/darkxex/ps5-homebrew-catalog/pull/420)
-and remains subject to maintainer review. The next version must only be a bug
-fix release after a real, reproducible source change; a playable game release
+The metadata reservation was merged through [PR #420](https://github.com/darkxex/ps5-homebrew-catalog/pull/420).
+It does not publish a playable package. The next version must only be a bug fix
+release after a real, reproducible source change; a playable game release
 requires the release gate and both regional PS5 evidence sets to pass.

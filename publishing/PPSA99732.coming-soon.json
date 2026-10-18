@@ -1,0 +1,14 @@
+{
+  "titleid": "PPSA99732",
+  "name": "OpenSA2B PS5",
+  "kind": "game",
+  "category": "console-ports",
+  "description": "OpenSA2B PS5: a dedicated native PS5 port project for Sonic Adventure 2: Battle (GameCube). Early development; no playable download. Requires your own disc image. No game code or assets included.",
+  "license": null,
+  "author": "BaZZtian",
+  "version": null,
+  "source_repo": null,
+  "artifact_url": null,
+  "sha256": null,
+  "icon_url": null
+}

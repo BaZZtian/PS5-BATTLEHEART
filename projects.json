@@ -21,6 +21,11 @@
     "original_game_files_allowed": false,
     "regional_gameplay_required": true,
     "github_release_allowed_now": false,
+    "github_source_release": {
+      "version": "v0.0.1",
+      "url": "https://github.com/BaZZtian/OpenSA2B-PS5/releases/tag/v0.0.1",
+      "pre_release": true
+    },
     "prospero_catalog_submission_after_verified_release": true,
     "prospero_immediate_approval_guaranteed": false
   },
@@ -48,6 +53,6 @@
       "pal_disc_revision": 0
     }
   ],
-  "repository": "https://github.com/BaZZtian/PS5_SonicAdventure2Battle",
-  "repository_status": "planned; not published"
+  "repository": "https://github.com/BaZZtian/OpenSA2B-PS5",
+  "repository_status": "published"
 }

@@ -1,13 +1,13 @@
 # OpenSA2B PS5 development status
 
 Project: **OpenSA2B PS5**. Compatibility target: **Sonic Adventure 2: Battle
-(GameCube)**. The intended source repository is
-[PS5_SonicAdventure2Battle](https://github.com/BaZZtian/PS5_SonicAdventure2Battle);
-the public repository has not been created yet.
+(GameCube)**. The public source repository is
+[BaZZtian/OpenSA2B-PS5](https://github.com/BaZZtian/OpenSA2B-PS5).
 
 ## Current source release
 
-`v0.0.1` is the alpha source snapshot described in [CHANGELOG.md](CHANGELOG.md).
+`v0.0.1` is the published alpha source snapshot described in
+[CHANGELOG.md](CHANGELOG.md) and [the GitHub release](https://github.com/BaZZtian/OpenSA2B-PS5/releases/tag/v0.0.1).
 It records the inspection tools, tests, regional preparation, research and
 publication metadata. It does not claim to be a playable game release.
 

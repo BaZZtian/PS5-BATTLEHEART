@@ -12,9 +12,10 @@ The implemented code is a read-only GameCube media layer, regional input
 preparation and a release-evidence checker. Synthetic tests and compilation are
 not evidence of gameplay on a console.
 
-The Prospero Store placeholder uses title ID `PPSA99732` and the display name
-**BattleHeart**. Its metadata reservation was merged through
-[catalog pull request #420](https://github.com/darkxex/ps5-homebrew-catalog/pull/420).
+The Prospero Store placeholder uses title ID `PPSA99732`. The original
+reservation was merged through [catalog pull request #420](https://github.com/darkxex/ps5-homebrew-catalog/pull/420).
+Renaming its display name to **BattleHeart** is requested in
+[pull request #484](https://github.com/darkxex/ps5-homebrew-catalog/pull/484), pending maintainer approval.
 It is a metadata-only listing and contains no download, game code, assets or
 ISO.
 

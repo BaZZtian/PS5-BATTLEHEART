@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
-project(OpenSA2B_PS5 VERSION 0.0.1 LANGUAGES C)
+project(BattleHeart VERSION 0.0.1 LANGUAGES C)
 
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/projects.json" PORT_CONFIGURATION)
 string(JSON PORT_ID GET "${PORT_CONFIGURATION}" projects 0 id)

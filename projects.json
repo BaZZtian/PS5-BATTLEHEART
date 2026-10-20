@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "display_name": "OpenSA2B PS5",
+  "display_name": "BattleHeart",
   "source_version": "0.0.1",
   "release_channel": "alpha-source",
   "target": "native PS5 homebrew",
@@ -23,7 +23,7 @@
     "github_release_allowed_now": false,
     "github_source_release": {
       "version": "v0.0.1",
-      "url": "https://github.com/BaZZtian/OpenSA2B-PS5/releases/tag/v0.0.1",
+      "url": "https://github.com/BaZZtian/PS5-BATTLEHEART/releases/tag/v0.0.1",
       "pre_release": true
     },
     "prospero_catalog_submission_after_verified_release": true,
@@ -32,7 +32,7 @@
   "projects": [
     {
       "id": "sonic-adventure-2-battle",
-      "title": "OpenSA2B PS5",
+      "title": "BattleHeart",
       "compatibility_target": "Sonic Adventure 2: Battle (GameCube)",
       "xbox_reference": "https://github.com/ChanseyIsTheBest/sa2-nx",
       "xbox_reference_revision": "26a4213fd01414522927779c520d406c57ce0014",
@@ -53,6 +53,6 @@
       "pal_disc_revision": 0
     }
   ],
-  "repository": "https://github.com/BaZZtian/OpenSA2B-PS5",
+  "repository": "https://github.com/BaZZtian/PS5-BATTLEHEART",
   "repository_status": "published"
 }

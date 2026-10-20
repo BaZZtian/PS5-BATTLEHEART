@@ -1,6 +1,6 @@
-# OpenSA2B PS5
+# BattleHeart
 
-OpenSA2B PS5 is an early native PS5 homebrew source project for the **Sonic
+BattleHeart is an early native PS5 homebrew source project for the **Sonic
 Adventure 2: Battle (GameCube)** compatibility target. It uses each player's
 own GameCube ISO. Target firmware: **12.40**.
 
@@ -13,7 +13,7 @@ preparation and a release-evidence checker. Synthetic tests and compilation are
 not evidence of gameplay on a console.
 
 The Prospero Store placeholder uses title ID `PPSA99732` and the display name
-**OpenSA2B PS5**. Its metadata reservation was merged through
+**BattleHeart**. Its metadata reservation was merged through
 [catalog pull request #420](https://github.com/darkxex/ps5-homebrew-catalog/pull/420).
 It is a metadata-only listing and contains no download, game code, assets or
 ISO.
@@ -36,7 +36,7 @@ the exact candidate build before a game release. Sonic also requires Chao/Battle
 We need owners of the **NTSC-U** version to run local media checks and share
 reviewed metadata, and developers to contribute compatibility work through PRs.
 See [NTSC testing](community/NTSC-TESTING.md) and [Contributing](CONTRIBUTING.md),
-or open a [regional compatibility report](https://github.com/BaZZtian/OpenSA2B-PS5/issues/new?template=regional-compatibility.yml).
+or open a [regional compatibility report](https://github.com/BaZZtian/PS5-BATTLEHEART/issues/new?template=regional-compatibility.yml).
 
 **Do not upload or send ISOs, original executables, REL modules, extracted game
 content, shaders, proprietary SDKs or download links, including in private messages.**

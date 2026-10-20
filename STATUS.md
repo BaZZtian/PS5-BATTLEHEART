@@ -1,13 +1,13 @@
-# OpenSA2B PS5 development status
+# BattleHeart development status
 
-Project: **OpenSA2B PS5**. Compatibility target: **Sonic Adventure 2: Battle
+Project: **BattleHeart**. Compatibility target: **Sonic Adventure 2: Battle
 (GameCube)**. The public source repository is
-[BaZZtian/OpenSA2B-PS5](https://github.com/BaZZtian/OpenSA2B-PS5).
+[BaZZtian/PS5-BATTLEHEART](https://github.com/BaZZtian/PS5-BATTLEHEART).
 
 ## Current source release
 
 `v0.0.1` is the published alpha source snapshot described in
-[CHANGELOG.md](CHANGELOG.md) and [the GitHub release](https://github.com/BaZZtian/OpenSA2B-PS5/releases/tag/v0.0.1).
+[CHANGELOG.md](CHANGELOG.md) and [the GitHub release](https://github.com/BaZZtian/PS5-BATTLEHEART/releases/tag/v0.0.1).
 It records the inspection tools, tests, regional preparation, research and
 publication metadata. It does not claim to be a playable game release.
 
@@ -20,7 +20,7 @@ publication metadata. It does not claim to be a playable game release.
   checks; its SHA-256/SHA-1 are stored only in the private local registration.
 - No NTSC-U image or physical PS5 gameplay test has been completed.
 - No playable game release or console deployment exists for this project.
-- A metadata-only Prospero Store reservation for **OpenSA2B PS5** (`PPSA99732`)
+- A metadata-only Prospero Store reservation for **BattleHeart** (`PPSA99732`)
   was merged through [catalog PR #420](https://github.com/darkxex/ps5-homebrew-catalog/pull/420).
   It is a listing without a download; no playable package is published.
 

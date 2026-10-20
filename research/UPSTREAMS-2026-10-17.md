@@ -1,4 +1,4 @@
-# OpenSA2B PS5: Quellen zur Beschleunigung des nativen SA2B-Ports
+# BattleHeart: Quellen zur Beschleunigung des nativen SA2B-Ports
 
 Prüfdatum: 17.10.2026. Geltungsbereich: ausschließlich Sonic Adventure 2: Battle
 für GameCube als eigenständige native PS5-App. Dies ist eine Quellenprüfung,

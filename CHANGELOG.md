@@ -1,4 +1,4 @@
-# OpenSA2B PS5 changelog
+# BattleHeart changelog
 
 ## v0.0.1 — alpha source snapshot — 19 October 2026
 
@@ -12,7 +12,7 @@ Included:
 - synthetic host tests, CMake/CTest integration and the release-evidence gate;
 - regional compatibility templates and community guidance;
 - upstream research notes and the metadata-only Prospero Store reservation for
-  `OpenSA2B PS5` / `PPSA99732`.
+  `BattleHeart` / `PPSA99732`.
 
 Verified at this snapshot:
 

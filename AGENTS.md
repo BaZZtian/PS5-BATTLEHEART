@@ -69,3 +69,9 @@ pull request, build, release, and Store/catalog submission.**
   established: **do not publish, package, merge, or submit a release**.
 - Do not bypass these rules to meet a deadline. This document is operational
   guidance only: it does not itself license, transfer, or revoke any copyright.
+
+## 4. Project-specific known rights (not a complete legal audit)
+
+- The project-authored public tooling snapshot already carries MIT. GameCube research reference `roeming/SA2B` at `874a480379260dce01e8988d6ab13c0deddcee4c` declares CC0.
+- Xbox 360/Switch reference `ChanseyIsTheBest/sa2-nx` at `26a4213fd01414522927779c520d406c57ce0014` declares GPL-3.0; it is not automatically compatible with a GameCube runtime, and reference use does not establish inclusion.
+- Sonic game content and any reconstructed executable rights are separate; no playable release cleared.

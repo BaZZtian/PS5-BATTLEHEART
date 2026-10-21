@@ -2,12 +2,12 @@
 
 Project: **BattleHeart**. Compatibility target: **Sonic Adventure 2: Battle
 (GameCube)**. The public source repository is
-[BaZZtian/PS5-BATTLEHEART](https://github.com/BaZZtian/PS5-BATTLEHEART).
+[BaZZtian/PS5-BATTLEHEART](https://github.com/BaZZtian/PS5-BattleHeart).
 
 ## Current source release
 
 `v0.0.1` is the published alpha source snapshot described in
-[CHANGELOG.md](CHANGELOG.md) and [the GitHub release](https://github.com/BaZZtian/PS5-BATTLEHEART/releases/tag/v0.0.1).
+[CHANGELOG.md](CHANGELOG.md) and [the GitHub release](https://github.com/BaZZtian/PS5-BattleHeart/releases/tag/v0.0.1).
 It records the inspection tools, tests, regional preparation, research and
 publication metadata. It does not claim to be a playable game release.
 

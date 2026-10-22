@@ -1,20 +1,26 @@
 <p align="center">
-  <img src="assets/branding/battleheart-icon-v2.png" width="160" height="160" alt="BattleHeart heart emblem">
+  <img src="assets/branding/battleheart-icon-v2.png" width="160" height="160" alt="BattleHeart project icon">
 </p>
 
 <h1 align="center">BattleHeart</h1>
 
 <p align="center">
-  A dedicated native PS5 homebrew port project for<br>
-  <strong>Sonic Adventure 2: Battle - GameCube</strong>
+  <strong>Sonic Adventure 2: Battle on PlayStation 5</strong><br>
+  An independent native PS5 homebrew project by <a href="https://github.com/BaZZtian">BaZZtian</a>.
 </p>
 
 <p align="center">
-  <a href="#availability">Availability</a> &bull;
-  <a href="#compatibility">Compatibility</a> &bull;
-  <a href="#credits">Credits</a> &bull;
-  <a href="#support">Support</a> &bull;
-  <a href="LICENSE">License</a>
+  <a href="#status-and-availability"><img src="https://img.shields.io/badge/status-in%20development-orange" alt="Status: in development"></a>
+  <img src="https://img.shields.io/badge/platform-PS5%20homebrew-003791" alt="Platform: PS5 homebrew">
+  <a href="#requirements"><img src="https://img.shields.io/badge/game%20data-Own%20GameCube%20ISO-555555" alt="Game data: Own GameCube ISO"></a>
+</p>
+
+<p align="center">
+  <a href="#status-and-availability">Status</a> &middot;
+  <a href="#installation">Installation</a> &middot;
+  <a href="#compatibility">Compatibility</a> &middot;
+  <a href="#support">Support</a> &middot;
+  <a href="#credits-and-licenses">Credits &amp; licenses</a>
 </p>
 
 ## About
@@ -25,7 +31,10 @@ BattleHeart is a dedicated native PlayStation 5 homebrew port project for
 The intended experience is a standalone PS5 application using your own game
 image. The target firmware is **12.40**.
 
-## Availability
+## Status and availability
+
+> [!WARNING]
+> **No playable PS5 build is available.** The published source snapshot is not an installable game.
 
 **In development. No playable PS5 build or installable application is available
 at this time.**
@@ -54,6 +63,10 @@ You must provide your own legally obtained GameCube disc image. The application
 is intended to read your game data locally. No ISO, original executable,
 textures, soundtrack or saves are supplied or downloaded by this project.
 
+## Installation
+
+There is no playable application to install yet. Installation instructions will accompany a tested application release on the [Releases page](https://github.com/BaZZtian/PS5-BattleHeart/releases). The existing `v0.0.1` source snapshot and Store reservation are not playable downloads.
+
 ## Compatibility
 
 | GameCube edition | Disc ID | PS5 gameplay |
@@ -74,7 +87,7 @@ personal information before sharing any report.
 Do not upload game images, extracted game files, music, saves, keys, credentials
 or proprietary SDK material.
 
-## Credits
+## Credits and licenses
 
 | Author / project | Contribution |
 | --- | --- |
@@ -88,7 +101,7 @@ The SA2B projects above are research references, not an integrated game engine
 in this snapshot. Their authors retain credit for their own work. BattleHeart
 does not claim authorship or ownership of upstream projects or the original game.
 
-## License
+### Licensing
 
 The existing project-authored media tooling is distributed under the
 [MIT license](LICENSE). Retain its copyright and license notice when reusing it.

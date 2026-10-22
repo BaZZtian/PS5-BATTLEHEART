@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Sonic Adventure 2: Battle on PlayStation 5</strong><br>
-  An independent native PS5 homebrew project by <a href="https://github.com/BaZZtian">BaZZtian</a>.
+  An unofficial PS5 homebrew port project using SA2B research as a reference, maintained by <a href="https://github.com/BaZZtian">BaZZtian</a>.
 </p>
 
 <p align="center">

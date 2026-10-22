@@ -2,7 +2,6 @@
 *
 !/.gitattributes
 !/.gitignore
-!/AGENTS.md
 !/CMakeLists.txt
 !/LICENSE
 !/README.md

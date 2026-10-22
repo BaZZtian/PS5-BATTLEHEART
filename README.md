@@ -1,102 +1,140 @@
-# BattleHeart
+<p align="center">
+  <img src="assets/branding/battleheart-icon-v2.png" width="160" height="160" alt="BattleHeart heart emblem">
+</p>
 
-BattleHeart is an early native PS5 homebrew source project for the **Sonic
-Adventure 2: Battle (GameCube)** compatibility target. It uses each player's
-own GameCube ISO. Target firmware: **12.40**.
+<h1 align="center">BattleHeart</h1>
 
-**Source version: `v0.0.1` (alpha source snapshot).** This is a tooling and
-documentation release, not a playable PS5 game package.
+<p align="center">
+  A dedicated native PS5 homebrew port project for<br>
+  <strong>Sonic Adventure 2: Battle - GameCube</strong>
+</p>
 
-**There is no playable PS5 port or downloadable game release here.**
-The implemented code is a read-only GameCube media layer, regional input
-preparation and a release-evidence checker. Synthetic tests and compilation are
-not evidence of gameplay on a console.
+<p align="center">
+  <a href="#getting-started">Getting started</a> &bull;
+  <a href="#compatibility">Compatibility</a> &bull;
+  <a href="#build-from-source">Build from source</a> &bull;
+  <a href="#support">Support</a> &bull;
+  <a href="LICENSE">License</a>
+</p>
 
-The Prospero Store placeholder uses title ID `PPSA99732`. The original
-reservation was merged through [catalog pull request #420](https://github.com/darkxex/ps5-homebrew-catalog/pull/420).
-Renaming its display name to **BattleHeart** is requested in
-[pull request #484](https://github.com/darkxex/ps5-homebrew-catalog/pull/484), pending maintainer approval.
-It is a metadata-only listing and contains no download, game code, assets or
-ISO.
+## About
 
-## Current scope
+BattleHeart targets a standalone native PS5 application using the player's own
+GameCube disc image. The project is dedicated to this game; the current
+implementation provides its media layer. Its architecture does not use a CPU emulator,
+PowerPC interpreter, JIT or a generic ISO-selection frontend.
 
-The Xbox 360 reference is not a drop-in GameCube runtime. Xbox XEX programs, ReXGlue/Xbox services and Xenos graphics must not be assumed compatible with the GC DOL/REL programs and GX graphics. A GC-only Sonic runtime is not implemented. The Sonic media adapter currently checks identity and DOL bounds only.
+| Project | Details |
+| --- | --- |
+| Source version | `v0.0.1` - alpha |
+| Target platform | PlayStation 5 homebrew, firmware 12.40 |
+| Original game | Sonic Adventure 2: Battle for GameCube |
+| Game data | Player-provided local ISO |
+| Build environment | Ubuntu 24.04 / WSL2, Clang, CMake and Ninja |
+| PS5 toolchain | Open-source `ps5-payload-sdk` / Prospero |
 
-| Region | Expected disc ID | Gameplay on PS5 |
-| --- | --- | --- |
-| NTSC-U | `GSNE8P` | Not tested |
-| PAL | `GSNP8P` | Not tested |
+**Current availability:** this source snapshot provides the media layer and a
+command-line media diagnostic. A complete native game engine, PS5 gameplay,
+graphics, audio, controller integration and an installable game package are not
+available in this snapshot. Compilation and disc validation do not establish
+playability.
 
-Disc revisions are recorded separately. Recognizing a header does not establish
-that a revision is compatible. Both regional gameplay reports are required for
-the exact candidate build before a game release. Sonic also requires Chao/Battle and multiplayer checks.
+## Getting started
 
-## Help wanted
+You need your own GameCube ISO. BattleHeart does not include or download game
+executables, textures, music or other original game content.
 
-We need owners of the **NTSC-U** version to run local media checks and share
-reviewed metadata, and developers to contribute compatibility work through PRs.
-See [NTSC testing](community/NTSC-TESTING.md) and [Contributing](CONTRIBUTING.md),
-or open a [regional compatibility report](https://github.com/BaZZtian/PS5-BattleHeart/issues/new?template=regional-compatibility.yml).
-
-**Do not upload or send ISOs, original executables, REL modules, extracted game
-content, shaders, proprietary SDKs or download links, including in private messages.**
-Users always provide their own image locally. Sources and future release packages
-must contain no original game files.
-
-## Prepare an owned ISO with one command
-
-Windows, from this repository's folder:
-
-```powershell
-.\prepare-ntsc.ps1 -Iso "D:\Own Games\game-ntsc.iso"
-```
-
-Add `-Region PAL` for PAL. Optional `-ExpectedSha256 <checksum>` rejects an image
-that differs from a known checksum. This uses Python 3.10+, WSL Ubuntu-24.04,
-CMake 3.25+, Ninja and Clang/GCC; it does not install software.
-
-Linux:
+For this alpha, build the media diagnostic using the instructions below, then
+run it on Linux with a path to your local image:
 
 ```sh
-python3 tools/prepare_region.py --iso "/media/own/game-ntsc.iso"
+./build/host/battleheart_media_alpha "/path/to/your/game.iso"
 ```
 
-The command builds the current inspection tool, runs synthetic tests, verifies
-the disc identity/region/number, FST and DOL bounds, and computes SHA-256/SHA-1.
-It does not modify, copy, upload or execute the ISO. It prepares inputs and test
-forms; it does not build a playable game. Native runtime/platform work is pending.
+The diagnostic opens the image read-only, validates its identity and file-system
+structure, and reports the main executable's offset and size as JSON. It does
+not extract or execute the game. A successful check exits with code `0`; a
+validation failure exits with code `1`.
 
-Outputs are Git-ignored under `private-inputs/sonic-adventure-2-battle/<region>/<sha256>/`:
+## Compatibility
 
-| File | Purpose | Public sharing |
-| --- | --- | --- |
-| `input.json` | Private local ISO path and registration | Never |
-| `metadata.json` | Disc identity, revision, hashes, size and structure result | After review |
-| `ps5-test-template.json` | Empty form for later real PS5 testing | Only report actual results |
-| `../current.json` | Local pointer to the latest registration | Keep local |
+| GameCube edition | Disc ID | Media validation | PS5 gameplay |
+| --- | --- | --- | --- |
+| PAL / Europe, disc 0, revision 0 | `GSNP8P` | Verified with an owned image on Linux | Not verified |
+| NTSC-U / North America, disc 0 | `GSNE8P` | Implemented; synthetic inputs checked | Not verified |
 
-## Build and test the tools
+Disc recognition is separate from gameplay compatibility. Other revisions and
+regions have not been established as supported. PAL and NTSC-U gameplay must be
+verified before a downloadable game release.
+
+## Build from source
+
+### Linux / WSL2
+
+Use Ubuntu 24.04 with CMake 3.25 or newer, Ninja and Clang 18. Both C and C++
+compiler packages must be available.
 
 ```sh
-cmake -S . -B build/host -G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=clang
+git clone https://github.com/BaZZtian/PS5-BATTLEHEART.git
+cd PS5-BATTLEHEART
+cmake -S . -B build/host -G Ninja \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_C_COMPILER=clang-18 \
+  -DCMAKE_CXX_COMPILER=clang++-18
 cmake --build build/host
-ctest --test-dir build/host --output-on-failure
 ```
 
-CI uses synthetic fixtures only. It never uploads original inputs or publishes
-game packages. See [STATUS.md](STATUS.md) and [CHANGELOG.md](CHANGELOG.md) for
-the current release state and limitations.
+This builds `battleheart_media_alpha` and its media libraries. No game data is
+required to compile them.
 
-## References and licensing
+### PS5 target
 
-- [sa2-nx](https://github.com/ChanseyIsTheBest/sa2-nx) (Xbox reference), revision `26a4213fd01414522927779c520d406c57ce0014`.
-- [SA2B](https://github.com/roeming/SA2B) (GameCube reference), revision `874a480379260dce01e8988d6ab13c0deddcee4c`.
+Install the open Homebrew `ps5-payload-sdk` separately. Set `PS5_PAYLOAD_SDK` to
+its local installation directory, then configure a separate build:
 
-Upstream game sources are not included in this initial tooling repository.
-The [MIT license](LICENSE) covers the new code here. It does not cover original
-game files or grant rights to upstream projects; their own licenses, authors
-and notices must be respected when integrating components.
+```sh
+cmake -S . -B build/ps5 -G Ninja \
+  -DCMAKE_TOOLCHAIN_FILE="$PS5_PAYLOAD_SDK/toolchain/prospero.cmake"
+cmake --build build/ps5
+```
 
-This is an unofficial project and is not affiliated with the original developers
-or publishers.
+The current target produces an x86-64 diagnostic ELF. Loader startup, console
+execution and installable SELF packaging remain unverified. This command does
+not install anything on a console. Proprietary Sony SDKs are not used.
+
+## Repository contents
+
+```text
+assets/branding/   Project icon
+runtime/          Bounded disc reader and C++ media adapters
+sonic/            Game-specific disc identity checks
+CMakeLists.txt    Native media library and diagnostic targets
+LICENSE           Existing project license
+```
+
+Internal development records, test fixtures, research notes and private inputs
+are maintained separately from this public app source tree.
+
+## Support
+
+Use [GitHub Issues](https://github.com/BaZZtian/PS5-BATTLEHEART/issues) for bug
+reports and compatibility feedback. Include the source revision, build target,
+disc ID/revision and a concise description of the problem. Review any output
+before sharing it and remove personal paths or other private information.
+
+Never upload ISOs, DOL/REL files, extracted assets, music, saves, keys, credentials
+or proprietary SDK material. Keep your original image and generated game content
+local.
+
+## License and attribution
+
+The existing project-authored media tooling is distributed under the
+[MIT license](LICENSE). Retain its copyright and license notice when reusing it.
+Third-party components retain their own licenses and authorship; referencing an
+upstream project does not mean its engine is included here.
+
+Sonic Adventure 2: Battle and its characters are associated with SEGA and their
+respective rightsholders. The project license does not grant rights to the
+original game, reconstructed game code, soundtrack or character artwork.
+BattleHeart is an unofficial homebrew project and is not affiliated with or
+endorsed by SEGA or Sony.

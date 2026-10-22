@@ -12,6 +12,7 @@
 <p align="center">
   <a href="#availability">Availability</a> &bull;
   <a href="#compatibility">Compatibility</a> &bull;
+  <a href="#credits">Credits</a> &bull;
   <a href="#support">Support</a> &bull;
   <a href="LICENSE">License</a>
 </p>
@@ -30,6 +31,22 @@ image. The target firmware is **12.40**.
 at this time.**
 
 The existing `v0.0.1` release is an early source snapshot, not a game download.
+
+The current source contains the native read-only media adapter, GameCube
+filesystem validation and executable-boundary checks. This is groundwork for
+the port. Successful component builds do not establish console gameplay.
+
+The [Prospero Store reservation](https://github.com/darkxex/ps5-homebrew-catalog/blob/main/apps/PPSA99732.json)
+uses title ID **PPSA99732**. It is a **Coming soon** placeholder with no playable
+download. There is no game installation procedure to follow yet.
+
+## Requirements
+
+- Your own legally obtained **Sonic Adventure 2: Battle GameCube disc image**.
+- A homebrew-capable **PlayStation 5**. The project's target firmware is **12.40**.
+
+These are the intended game requirements; a console-ready application is still
+in development.
 
 ## Your game data
 
@@ -57,7 +74,21 @@ personal information before sharing any report.
 Do not upload game images, extracted game files, music, saves, keys, credentials
 or proprietary SDK material.
 
-## License and attribution
+## Credits
+
+| Author / project | Contribution |
+| --- | --- |
+| [BaZZtian](https://github.com/BaZZtian) | BattleHeart maintenance and project-specific PS5 integration work. |
+| [roeming and the SA2B contributors](https://github.com/roeming/SA2B) | GameCube SA2B decompilation research reference. |
+| [nlopez99 and the SA2B reconstruction contributors](https://github.com/nlopez99/SA2B) | Additional GameCube reconstruction research references. |
+| [ps5-payload-dev contributors](https://github.com/ps5-payload-dev/sdk) | Open PS5 homebrew SDK used for the diagnostic cross-build. |
+| [LLVM contributors](https://github.com/llvm/llvm-project) | Clang/LLVM compiler toolchain. |
+
+The SA2B projects above are research references, not an integrated game engine
+in this snapshot. Their authors retain credit for their own work. BattleHeart
+does not claim authorship or ownership of upstream projects or the original game.
+
+## License
 
 The existing project-authored media tooling is distributed under the
 [MIT license](LICENSE). Retain its copyright and license notice when reusing it.
